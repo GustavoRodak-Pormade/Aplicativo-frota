@@ -1,6 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import CadastrarMulta from './pages/cadastrarMulta/cadastrarmulta';
+import Dashboard from './pages/cadastrarMulta/Dashboard';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -9,11 +10,11 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{ headerShown: false }}
-        initialRouteName="CadastrarMulta"
+        initialRouteName="Dashboard"
       >
         <Stack.Screen
-          name="CadastrarMulta"
-          component={CadastrarMulta}
+          name="Dashboard"
+          component={Dashboard}
         />
 
       </Stack.Navigator>
