@@ -20,10 +20,9 @@ export default function Navbar() {
       </View>
       {/* Icones de navegação */}
       <View style={style.navigateIcons}>
+        <CarIcon />
         <DashIcon />
         <NotifyIcon />
-        <PeopleIcon />
-        <CarIcon />
       </View>
       {/* Logo */}
       <View style={style.logo}>
@@ -63,9 +62,8 @@ const style = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     height: 30,
-    justifyContent: "center",
     alignItems: "center",
-    marginLeft: 5
+    marginLeft: 5,
   },
   name: {
     textAlign: "center",
@@ -77,8 +75,9 @@ const style = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    width: 180,
+    width: 120,
     height: 30,
+
   },
   logo: {
     width: 70,
