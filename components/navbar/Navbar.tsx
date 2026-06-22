@@ -1,9 +1,7 @@
 import { Image, StyleSheet, Text, View } from "react-native";
-
 import LogoPCar from "../../assets/Logo_png.png";
 import DashIcon from "../../assets/dashboard.svg";
 import NotifyIcon from "../../assets/Notification.svg";
-import PeopleIcon from "../../assets/PeopleIcon.svg";
 import CarIcon from "../../assets/Car.svg";
 import { useState } from "react";
 

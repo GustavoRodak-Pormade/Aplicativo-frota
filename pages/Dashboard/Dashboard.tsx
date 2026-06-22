@@ -1,9 +1,9 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import Navbar from "../../components/navbar/Navbar";
-
 import CarImg from "../../assets/Carro.png";
 import Button from "../../components/buttons/Button";
 import { useState } from "react";
+import CardNotification from "../../components/cardNotification/CardNotification";
 
 export default function Dashboard() {
 
@@ -41,6 +41,11 @@ export default function Dashboard() {
             <Text style={style.textPlate}>{plate}</Text>
           </View>
         </View>
+      </View>
+      {/* Cards */}
+      <View style={style.cardContainer}>
+        <CardNotification />
+        <CardNotification />
       </View>
     </View>
   )
@@ -104,6 +109,15 @@ const style = StyleSheet.create({
     justifyContent: "flex-end",
     marginTop: 5,
     paddingRight: 10,
+
+  },
+  cardContainer: {
+    width: "100%",
+    height: 580,
+    display: "flex",
+    marginTop: 20,
+    alignItems: "center",
+    gap: 20,
 
   }
 
