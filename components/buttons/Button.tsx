@@ -1,8 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 interface ButtonProps {
   text: string,
-  textWeight: string;
   textWidth: number;
   textColor: string;
   bgWidth: number;
@@ -11,11 +10,31 @@ interface ButtonProps {
   OnPress: () => void;
 }
 
-export default function Button({ OnPress, bgColor, bgHeight, bgWidth, textWeight, textColor, textWidth, text }: ButtonProps) {
+export default function Button({ OnPress, bgColor, bgHeight, bgWidth, textColor, textWidth, text }: ButtonProps) {
   return (
-    <View >
-      <Text >{text}</Text>
-    </View>
+    <Pressable onPress={OnPress}>
+      <View style={{
+        backgroundColor: bgColor,
+        width: bgWidth,
+        height: bgHeight,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: 5,
+        
+      }}>
+        <Text style={{
+          fontWeight: "700",
+          color: textColor,
+          fontSize: textWidth,
+          
+        }}>{text}</Text>
+      </View>
+    </Pressable>
   )
 }
+
+const style = StyleSheet.create({
+
+})
 

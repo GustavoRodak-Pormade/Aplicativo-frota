@@ -2,11 +2,23 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import Navbar from "../../components/navbar/Navbar";
 
 import CarImg from "../../assets/Carro.png";
+import Button from "../../components/buttons/Button";
 
 export default function Dashboard() {
   return (
     <View style={style.container}>
       <Navbar />
+      <View style={style.button}>
+        <Button
+          OnPress={() => ""}
+          bgColor="#C8DBC5"
+          bgHeight={28}
+          bgWidth={126}
+          textColor="#111"
+          text="Cadastrar alterações"
+          textWidth={12}
+        />
+      </View>
       {/* dasboard */}
       <View style={style.dash}>
         {/* info carro */}
@@ -78,6 +90,15 @@ const style = StyleSheet.create({
   },
   textPlate: {
     fontWeight: "700"
+  },
+  button: {
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    marginTop: 5,
+    paddingRight: 10,
+
   }
 
 })

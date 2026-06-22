@@ -1,6 +1,6 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Dashboard from './pages/cadastrarMulta/Dashboard';
+import Dashboard from './pages/Dashboard/Dashboard';
 
 
 const Stack = createNativeStackNavigator();
