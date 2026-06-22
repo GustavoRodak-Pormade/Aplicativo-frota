@@ -5,8 +5,13 @@ import DashIcon from "../../assets/dashboard.svg";
 import NotifyIcon from "../../assets/Notification.svg";
 import PeopleIcon from "../../assets/PeopleIcon.svg";
 import CarIcon from "../../assets/Car.svg";
+import { useState } from "react";
 
 export default function Navbar() {
+
+  const [name, setName] = useState("Nome");
+  
+
   return (
     <View style={style.container}>
       {/* Avatar com nome */}
@@ -14,7 +19,7 @@ export default function Navbar() {
         <View style={style.avatar}><Image /></View>
         <View style={style.textAvatar}>
           <Text style={style.name}>
-            Nome
+            {name}
           </Text>
         </View>
       </View>

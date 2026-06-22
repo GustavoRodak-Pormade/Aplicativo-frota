@@ -3,8 +3,14 @@ import Navbar from "../../components/navbar/Navbar";
 
 import CarImg from "../../assets/Carro.png";
 import Button from "../../components/buttons/Button";
+import { useState } from "react";
 
 export default function Dashboard() {
+
+  const [model, setModel] = useState("Opala");
+  const [status, setStatus] = useState("• Em viajem");
+  const [plate, setPlate] = useState("ABC1D34");
+
   return (
     <View style={style.container}>
       <Navbar />
@@ -26,13 +32,13 @@ export default function Dashboard() {
           <Image source={CarImg} style={style.ImgCar} />
         </View>
         <View style={style.containerInfos}>
-          <Text style={style.textCar}>Opala</Text>
+          <Text style={style.textCar}>{model}</Text>
           <View style={style.statusBg}>
-            <Text style={style.textStatus}>• Em viajem</Text>
+            <Text style={style.textStatus}>{status}</Text>
           </View>
           <View>
             <Text style={style.textPlaca}>Placa:</Text>
-            <Text style={style.textPlate}>ABC-1234</Text>
+            <Text style={style.textPlate}>{plate}</Text>
           </View>
         </View>
       </View>
